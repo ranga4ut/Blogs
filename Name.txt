@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 My name is Ranaga
 add new line
+=======
+My Work for Ranga..
+>>>>>>> b26f6e41555e1ef23592b1fef7e21275804aae00
+Ok, so what ?....

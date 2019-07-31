@@ -1,0 +1,40 @@
+pipeline {
+    agent any
+    stages {
+        stage('fetchREPO') {
+            steps {
+                    git 'https://github.com/rchidana/Accenture_Pipeline.git';
+            }
+        }
+        
+        stage('jobCompile') {
+            steps {
+                    bat label: '', script: 'Compile.bat';
+            }
+        }
+        
+        stage('jobPackage') {
+            steps {
+                    bat label: '', script: 'Deploy.bat'; 
+            }
+        }
+        
+        stage('jobDeploy') {
+            steps {
+                    bat label: '', script: 'Package.bat'; 
+            }
+        }
+        
+    }
+    post {
+        success {
+            mail bcc: '', body: 'Message SUCCESS', cc: '', from: '', replyTo: '', subject: 'TEST_STATUS', to: 'xyz@yahoo.com'
+        }
+        failure {
+            mail bcc: '', body: 'Message FAILURE', cc: '', from: '', replyTo: '', subject: 'TEST_STATUS', to: 'xyz@yahoo.com'
+        }
+        unstable {
+            mail bcc: '', body: 'Message UNSTABLE', cc: '', from: '', replyTo: '', subject: 'TEST_STATUS', to: 'xyz@yahoo.com'
+        }
+    }
+}

@@ -1,2 +1,23 @@
 This is my Blogging site, Great !!!
 docker swarm join --token SWMTKN-1-2d07qw4qmexqsgcb026ld7n5yq9gurxqsyp9ia4z9rlek7wlcn-7y5rb6f88vyplx5399awjcmmc 54.164.155.195:2377
+
+###
+
+[ec2-user@ip-172-31-90-57 ~]$ docker swarm init --advertise-addr 54.164.155.195
+Swarm initialized: current node (7e5k6f6bbounvys8gxguqcoka) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token SWMTKN-1-2d07qw4qmexqsgcb026ld7n5yq9gurxqsyp9ia4z9rlek7wlcn-7y5rb6f88vyplx5399awjcmmc 54.164.155.195:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+
+[ec2-user@ip-172-31-90-57 ~]$ docker node ls
+ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
+7e5k6f6bbounvys8gxguqcoka *   ip-172-31-90-57     Ready               Active              Leader              18.06.1-ce
+[ec2-user@ip-172-31-90-57 ~]$ docker node ls
+ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
+yeqywa9f6ap5aketn5vqewp36     ip-172-31-88-150    Ready               Active                                  18.06.1-ce
+7e5k6f6bbounvys8gxguqcoka *   ip-172-31-90-57     Ready               Active              Leader              18.06.1-ce
+[ec2-user@ip-172-31-90-57 ~]$
+

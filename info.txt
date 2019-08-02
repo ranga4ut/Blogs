@@ -1,1 +1,2 @@
 This is my Blogging site, Great !!!
+docker swarm join --token SWMTKN-1-2d07qw4qmexqsgcb026ld7n5yq9gurxqsyp9ia4z9rlek7wlcn-7y5rb6f88vyplx5399awjcmmc 54.164.155.195:2377
